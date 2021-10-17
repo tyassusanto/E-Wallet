@@ -50,16 +50,18 @@ body{
 }
 .form-input input{
     border: 0;
-    width: 60%;
+    width: 85%;
     overflow: hidden;
     border-bottom: 1px solid rgba(169, 169, 169, 0.6);
     padding: 15px 0;
     padding-left: 50px;
     outline: 0;
+    margin-top: 40px;
 }
 .forgot{
     text-align: right;
     margin-bottom: 50px;
+    margin-top: 10px;
 }
 .btn-login{
     width: 100%;
@@ -71,6 +73,7 @@ body{
     font-size: 18px;
     color: white;
     background-color: #6379F4;
+    cursor: pointer;
 }
 
 .creat-acc{
@@ -80,13 +83,22 @@ body{
 
 .icon{
     margin-top: 50px;
+    position: absolute;
+}
+.icon-eye{
+    position: absolute;
+    margin-top: 55px;
+    padding-right: 30px;
+}
+a{
+    text-decoration: none;
 }
 
 </style>
 <body>
     <div class="container">
         <div class="container-left">
-            <div class="container-left left-content">
+            <div class="left-content">
                 <h1 class="left-text logo">Zwallet</h1>
                 <img class="ilustration" src="./img/hp.svg" alt="">
                 <h2 class="left-text tagline ">App that Covering Banking Needs.</h2>
@@ -111,12 +123,13 @@ body{
                     <div class="form-input email">
                         <img class="icon lock" src="./img/icon/lock.svg" alt="">
                         <input placeholder="Enter your password" type="password" name="password" id="password">
-                        <img class="icon eye" src="./img/icon/eye.svg" alt="">
+                        <img class="icon-eye" src="./img/icon/eye.svg" alt="">
                     </div>
-                <div class="forgot">Forgot password?<a href="#"></a>
+                <div class="forgot"><a href="./reset-password-1.html">Forgot password?</a>
                 </div>
             </div>
-            <button class="btn-login">Login</button>
+            <a href="./home.html">
+            <button class="btn-login">Login</button></a>
             <p class="creat-acc">Don't have an account ?<a href="./signup.html">Sign Up</a>
             </p>
         </div>
