@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwallet</title>
+</head>
+<style>
+    body{
+        margin: 0 auto;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo{
+        color: white;
+        font-size: 29px;
+        font-weight: bold;
+        margin: 60px 0px 0px 100px;
+    }
+    .btn-header{
+        width: 120px;
+        height: 59px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 60px 160px 0px 0px;
+    }
+    .btn-login{
+        margin-right: 20px !important;
+        background-color: #6379F4;
+        border: white 2px solid;
+        color: white;
+    }
+    .btn-signup{
+        background-color: white;
+        border: #645757;
+        color: #6379F4;
+    }
+    .section-1{
+        background-image: url(./img/background-landing-1.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .section-1-content{
+        display: flex;
+        color: white;
+    }
+    .tagline{
+        margin: 95px 200px 0px 100px ;
+    }
+    .tagline-zwallet{
+        font-size: 60px;
+        font-weight: 800;
+    }
+    .tagline-desc{
+        font-size: 18px;
+        padding-right: 50px;
+        margin-top: 95px;
+    }
+    .btn-try{
+        width: 173px;
+        height: 57px;
+        background-color: white;
+        color: #6379F4;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 12px;
+        border: #6379F4;
+        margin-top: 60px;
+    }
+    /* section 2 stye */
+    .section-2-content{
+        background: rgba(71, 58, 209, 0.06);
+        padding: 90px;
+        display: flex;
+    }
+    .section-2-logo{
+        display: flex;
+        margin-right: 150px;
+        cursor: pointer;
+    }
+    .section-2-logo:hover{
+        transform: scale(1.1);
+        transition: 500ms;
+    }
+
+    /* section 3 style */
+    .tittle-section-3{
+        margin-bottom: 60px;
+    }
+    .section-3{
+        background-color: #e5e5e5;
+    }
+    .section-3-top{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 60px 0px 60px 0px;
+    }
+    .section-3-bottom{
+        display: flex;
+        margin: 0px 60px 0px 60px;
+        
+    }
+    .sec-3-border{
+        background-color: white;
+        border-radius: 25px;
+        margin: 10px 10px 80px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+        cursor: pointer;
+    }
+    .sec-3-border:hover{
+        transform: scale(1.05);
+        transition: 500ms;
+    }
+    .icon-s3-bottom{
+        margin-bottom: 40px;
+    }
+    .tittle-section-3{
+        font-size: 60px;
+        font-weight: 800;
+        color: black;
+    }
+    .tittle-s3-icon{
+        margin-bottom: 40px;
+        color: #3A3D42;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    .desc-tittle-s3{
+        color: rgba(58, 61, 66, 0.9);
+    }
+    .section-3-desc{
+        font-size: 18px;
+        color: #3A3D42;
+        width: 444px;
+        text-align: center;
+    }
+    /* section 4 style */
+    .section-4{
+        display: flex;
+        background-color: rgba(71, 58, 209, 0.06);
+    }
+    .left-s4{
+        margin-left: 90px;
+        margin-right: 100px;
+    }
+    .tittle-s4{
+        font-size: 60px;
+        font-weight: 800;
+        color: #3A3D42;
+        width: 480px;
+        margin: 170px 0px 20px 0px;
+    }
+    .features{
+        margin-top: 50px;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 25px;
+        width: 620px;
+        height: 127px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .features-tittle{
+        font-size: 20px;
+        font-weight: bold;
+        color: #3A3D42;
+        padding: 25px 0px 25px 60px;
+    }
+    .features-desc{
+        margin-left: 60px;
+        font-size: 18px;
+        color: rgba(58, 61, 66, 0.9);
+    }
+    /* footer style */
+    footer{
+        background-color: #6379F4;
+    }
+    .footer-top{
+        margin: 0px 60px 0px 60px;
+        padding-top: 60px;
+    }
+    .footer-logo{
+        margin-bottom: 60px;
+        font-size: 36px;
+        color: white;
+        font-weight: bold;
+    }
+    .footer-desc{
+        width: 285px;
+        font-size: 18px;
+        color: rgba(239, 239, 239, 0.75);
+    }
+    .footer-bottom{
+        border-top: white 1px solid;
+        margin: 60px 60px 0px 60px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        color: #efefef;
+        padding: 40px 0px 100px 0px;
+    }
+    .right-footer-bottom{
+        display: flex;
+    }
+</style>
+<body>
+    <main>
+        <section class="section-1">
+            <div class="header">
+                <h1 class="logo">Zwallet</h1>
+                <div class="button-header">
+                    <button class="btn-header btn-login">Login</button>
+                    <button class="btn-header btn-signup">Sign Up</button>
+                </div>
+            </div>
+            <div class="section-1-content">
+                <div class="tagline">
+                    <div class="tagline-zwallet">Awesome App
+                        For Saving Time.</div>
+                    <div class="tagline-desc">We bring you a mobile app for banking problems that
+                        oftenly wasting much of your times.</div>
+                        <div class="btn-content">
+                            <button class="btn-try">Try It Free</button>
+                        </div>
+                </div>
+                <div class="img-1">
+                    <img src="./img/landing-phone-section-1.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-2">
+            <div class="section-2-content">
+                <img class="section-2-logo" src="./img/microsoft-logo.svg" alt="">
+                <img class="section-2-logo" src="./img/dropbox-logo.svg" alt="">
+                <img class="section-2-logo" src="./img/hnm-logo.svg" alt="">
+                <img class="section-2-logo" src="./img/airbnb-logo.svg" alt="">
+            </div>
+        </section>
+        <section class="section-3">
+            <div class="section-3-content">
+                <div class="section-3-top">
+                    <div class="tittle-section-3"><font color="#6379F4">About</font> the Application.</div>
+                    <div class="section-3-desc">We have some great features from the application and it’s totally free to use by all users around the world.</div>
+                </div>
+                <div class="section-3-bottom">
+                    <div class="sec-3-border s3support">
+                        <div class="icon-s3-bottom"><img src="./img/icon/support-icon.svg" alt=""></div>
+                        <div class="tittle-s3-icon">24/7 Support</div>
+                        <div class="desc-tittle-s3">We have 24/7 contact support so you can contact us whenever you want and we will respond it.</div>
+                    </div>
+                    <div class="sec-3-border s3privacy">
+                        <div class="icon-s3-bottom"><img src="./img/icon/privacy-icon.svg" alt=""></div>
+                        <div class="tittle-s3-icon">Data Privacy</div>
+                        <div class="desc-tittle-s3">We make sure your data is safe in our database and we will encrypt any data you submitted to us.</div>
+                    </div>
+                    <div class="sec-3-border s3download">
+                        <div class="icon-s3-bottom"><img src="./img/icon/download-icon-lp.svg" alt=""></div>
+                        <div class="tittle-s3-icon">Easy Download</div>
+                        <div class="desc-tittle-s3">Zwallet is 100% totally free to use it’s now available on Google Play Store and App Store.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-4">
+            <div class="left-s4">
+                <div class="phone2-s4"><img src="./img/phone2-s4.png" alt=""></div>
+                <div class="phone1-s4"><img src="./img/phone1-s4.png" alt=""></div>
+            </div>
+            <div class="right-s4">
+                <div class="tittle-s4">All The <font color="#6379F4">Great</font>
+                    Zwallet Features.</div>
+                    <div class="features">
+                        <div class="features-tittle">1. Small Fee</div>
+                        <div class="features-desc">We only charge 5% of every success transaction done in Zwallet app.</div>
+                    </div>
+                    <div class="features">
+                        <div class="features-tittle">2. Data Secured</div>
+                        <div class="features-desc">All your data is secured properly in our system and it’s encrypted.</div>
+                    </div>
+                    <div class="features">
+                        <div class="features-tittle">3. User Friendly</div>
+                        <div class="features-desc">Zwallet come up with modern and sleek design and not complicated.</div>
+                    </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-top">
+                <div class="footer-logo">Zwallet</div>
+                <div class="footer-desc">Simplify financial needs and saving much time in banking needs with one single app.</div>
+            </div>
+            <div class="footer-bottom">
+                <div class="left-footer-bottom">2020 Zwallet. All right reserved.</div>
+                <div class="right-footer-bottom">
+                    <div class="footer-phone">+62 5637 8882 9901</div>
+                    <div class="footer-contact">contact@zwallet.com</div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
