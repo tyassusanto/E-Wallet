@@ -48,8 +48,6 @@
     }
     .img-1{
         margin-bottom: -6px;
-        animation-duration: 4s;
-        animation-name: naik;
     }
     .section-1-content{
         display: flex;
@@ -61,11 +59,15 @@
     .tagline-zwallet{
         font-size: 60px;
         font-weight: 800;
+        animation-name: opacity;
+        animation-duration: 3s;
     }
     .tagline-desc{
         font-size: 18px;
         padding-right: 50px;
         margin-top: 95px;
+        animation-name: opacity;
+        animation-duration: 5s;
     }
     .btn-try{
         width: 173px;
@@ -79,10 +81,14 @@
         margin-top: 60px;
     }
     /* section 2 stye */
+    .section-2{
+        background: rgba(71, 58, 209, 0.06);
+    }
     .section-2-content{
         background: rgba(71, 58, 209, 0.06);
         padding: 90px;
         display: flex;
+        overflow: hidden;
     }
     .section-2-logo{
         display: flex;
@@ -106,6 +112,8 @@
         align-items: center;
         flex-direction: column;
         padding: 60px 0px 60px 0px;
+        animation-name: opacity;
+        animation-duration: 3s;
     }
     .section-3-bottom{
         display: flex;
@@ -178,6 +186,7 @@
         width: 620px;
         height: 127px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
     }
     .features-tittle{
         font-size: 20px;
@@ -189,6 +198,18 @@
         margin-left: 30px;
         font-size: 18px;
         color: rgba(58, 61, 66, 0.9);
+    }
+    .features-1{
+        animation-name: slide ;
+        animation-duration: 3s;
+    }
+    .features-2{
+        animation-name: slide ;
+        animation-duration: 4s;       
+    }
+    .features-3{
+        animation-name: slide ;
+        animation-duration: 5s; 
     }
     /* section 5 style */
     .section-5{
@@ -290,9 +311,13 @@
     button{
         cursor: pointer;
     }
-    @keyframes naik{
-        from{margin-right: -800px;}
-        to{margin-right: 0px;}
+    @keyframes slide{
+        from{margin-left: 660px;}
+        to{margin-left: 0px;}
+    }
+    @keyframes opacity{
+        from{opacity:0}
+        to{opacity: 1;}
     }
 </style>
 <body>
@@ -321,11 +346,13 @@
             </div>
         </section>
         <section class="section-2">
-            <div class="section-2-content">
-                <img class="section-2-logo" src="./img/microsoft-logo.svg" alt="">
-                <img class="section-2-logo" src="./img/dropbox-logo.svg" alt="">
-                <img class="section-2-logo" src="./img/hnm-logo.svg" alt="">
-                <img class="section-2-logo" src="./img/airbnb-logo.svg" alt="">
+            <div class="slide-animation">
+                <div class="section-2-content">
+                    <img class="logo-1 section-2-logo" src="./img/microsoft-logo.svg" alt="">
+                    <img class="logo-2 section-2-logo" src="./img/dropbox-logo.svg" alt="">
+                    <img class="logo-3 section-2-logo" src="./img/hnm-logo.svg" alt="">
+                    <img class="logo-4 section-2-logo" src="./img/airbnb-logo.svg" alt="">
+                   </div>
             </div>
         </section>
         <section class="section-3">
@@ -361,17 +388,19 @@
             <div class="right-s4">
                 <div class="tittle-s4">All The <font color="#6379F4">Great</font>
                     Zwallet Features.</div>
-                    <div class="features">
-                        <div class="features-tittle">1. Small Fee</div>
-                        <div class="features-desc">We only charge 5% of every success transaction done in Zwallet app.</div>
-                    </div>
-                    <div class="features">
-                        <div class="features-tittle">2. Data Secured</div>
-                        <div class="features-desc">All your data is secured properly in our system and it’s encrypted.</div>
-                    </div>
-                    <div class="features">
-                        <div class="features-tittle">3. User Friendly</div>
-                        <div class="features-desc">Zwallet come up with modern and sleek design and not complicated.</div>
+                    <div class="features-box">
+                        <div class="features features-1">
+                            <div class="features-tittle">1. Small Fee</div>
+                            <div class="features-desc">We only charge 5% of every success transaction done in Zwallet app.</div>
+                        </div>
+                        <div class="features features-2">
+                            <div class="features-tittle">2. Data Secured</div>
+                            <div class="features-desc">All your data is secured properly in our system and it’s encrypted.</div>
+                        </div>
+                        <div class="features features-3">
+                            <div class="features-tittle">3. User Friendly</div>
+                            <div class="features-desc">Zwallet come up with modern and sleek design and not complicated.</div>
+                        </div>
                     </div>
             </div>
         </section>
