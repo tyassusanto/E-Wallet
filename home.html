@@ -43,6 +43,9 @@
         align-self: center;
         margin: 0 10px;
     }
+    .profile{
+        align-items: center;
+    }
     /* container style */
     .main-container{
         justify-content: center;
@@ -101,7 +104,7 @@
         padding: 2vh 0;
         font-weight: bold;
     }
-    .right-balance{
+    .right-balance-content{
         flex-direction: column;
     }
     button{
@@ -203,15 +206,104 @@
 .phone-footer{
     padding-right: 12%;
 }
+@media screen and (max-width : 600px){
+    .logo, .left-section, .chart, .footer{
+        display: none;
+    }
+    .right-section, .history{
+        width: 100%;
+    }
+    .header{
+        border-radius: 0;
+        padding: 5%;
+        
+    }
+    .profile{
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-container{
+        padding: 0;
+    }
+    .history{
+        background-color: #FAFCFF;
+        border-radius: 0;
+        margin: 0;
+        padding: 0%;
+    }
+    .trans-history{
+        padding: 5%;
+        border-radius: 7px;
+    }
+    .history-1{
+        background-color: white;
+        padding: 2vh 2vw;
+        margin: 3vh 0;
+        border-radius: 7px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .top-main{
+        flex-direction: column;
+        border-radius: 0;
+        margin: 0;
+        background-color: #FAFCFF;
+        padding: 0%;
+    }
+    .left-balance{
+        background-color: #6379F4;
+        width: 97%;
+        border-radius: 20px;
+        padding: 0%;
+    }
+    .left-balance-content{
+        padding: 3%;
+    }
+    .amount-balance{
+        font-size: 4vh;
+    }
+    .right-balance-content{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .right-balance{
+        place-content: center;
+        width: 90%;
+        padding: 3%;
+    }
+    button{
+        width: 40vw;
+        height: 13vw;
+        background-color: #EAEDFF;
+        color: black;
+    }
+    .btn-topup{
+        margin: 0;
+    }
+    .hide-responsive{
+        display: none;
+    }
+
+}
+@media screen and (min-width : 600px){
+    .show-responsive{
+        display: none;
+    }
+}
 </style>
 <body>
     <header class="d-flex header">
         <div class="logo">ZWallet</div>
         <div class="d-flex profile">
             <img src="./img/pp.svg" alt="">
-            <div class="d-flex user-detail">
+            <div class="d-flex hide-responsive user-detail">
                 <div class="name-user">Robert Chandler</div>
                 <div class="phone-user">+62 8139 3877 7946</div>
+            </div>
+            <div class="d-flex show-responsive user-detail">
+                <div class="name-user">Hello,</div>
+                <div class="phone-user">Robert Chandler</div>
             </div>
             <div class="icon-bell"><img src="./img/icon/bell.svg" alt=""></div>
         </div>
@@ -262,23 +354,27 @@
        <section class="d-flex right-section">
             <div class="d-flex border top-main">
                 <div class="left-balance">
-                    <div class="tittle-balance" style="color: #DFDCDC;">Banalnce</div>
-                    <div class="amount-balance">Rp. 120.000</div>
-                    <div class="phone-balance" style="color: #DFDCDC;">+62 813-9387-7946</div>
+                    <div class="left-balance-content">
+                        <div class="tittle-balance" style="color: #DFDCDC;">Banalnce</div>
+                        <div class="amount-balance">Rp. 120.000</div>
+                        <div class="phone-balance" style="color: #DFDCDC;">+62 813-9387-7946</div>
+                    </div>
                 </div>
                 <div class="d-flex right-balance">
-                    <button class="btn-trf">
-                        <div class="d-flex on-button">
-                            <img src="./img/icon/arrow-up-icon-button.svg" alt="">
-                            <p>Transfer</p>
-                        </div>
-                    </button>
-                    <button class="btn-topup">
-                        <div class="d-flex on-button">
-                            <img src="./img/icon/plus-icon-button.svg" alt="">
-                            <p>Top Up</p>
-                        </div>
-                    </button>
+                    <div class="d-flex right-balance-content">
+                        <button class="btn-trf">
+                            <div class="d-flex on-button">
+                                <img src="./img/icon/arrow-up-icon-button.svg" alt="">
+                                <p>Transfer</p>
+                            </div>
+                        </button>
+                        <button class="btn-topup">
+                            <div class="d-flex on-button">
+                                <img src="./img/icon/plus-icon-button.svg" alt="">
+                                <p>Top Up</p>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="d-flex bot-main">
