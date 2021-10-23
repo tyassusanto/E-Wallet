@@ -3,378 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Home | ZWallet</title>
 </head>
 <style>
-    *{
-    font-family: Nunito Sans;
-}
-body{
-    margin: 0;
-    padding: 0;
-}
-.wrapper{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: #E5E5E5;
-    flex-direction: column;
+    body{
+        margin: 0;
+        background-color: #FAFCFF;
+        font-family: Nunito Sans;
     }
- .header{
-    display: flex;
-    justify-content: space-between;
-    height: 10%;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
-
- }
-
- .header-right{
-    display: flex;
-    margin-right: 40px;
-    width: 300px ;
- }
- h1{
-    color: #6379F4;
-    size: 29px;
-    font-weight: bold;
- }
- .name{
-    color: #3A3D42;
-    font-weight: bold;
- }
- .header-left{ 
-     display: flex;
-     margin-left: 40px;
-     margin-top: -8px;
+    .d-flex{
+        display: flex;
     }
-.user{
-    margin-left: 30px;
-    margin-right: 15px;
-    margin-top: 13px;
-}
-.content{
-    height: 100%;
-    margin: 15px 70px;
-    display: flex;
-}
-.pprichard{
-    width: 52px;
-}
-.main-content{
-    margin: 15px;
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-}
+    .border{
+        border-radius: 25px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        margin: 5px;
+    }
+    /* header style */
+    .header{
+        padding: 1% 5%;
+        justify-content: space-between;
+        background-color: white;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        align-items: center;
+    }
+    .logo{
+        color: #6379F4;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    .user-detail{
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        margin: 0 10px;
+    }
+    /* container style */
+    .main-container{
+        justify-content: center;
+        background-color: #FAFCFF;
+        padding: 1% 5%;
+    }
+    /* list style */
+    aside{
+        flex-direction: column;
+    }
+    .left-section{
+        width: 20%;
+        background-color: white
+    }
+    .style-li{
+        list-style: none;
+        padding: 0%;
+    }
+    .box-li-active {
+        align-items: center;
+        border-left: 5px solid #6379F4;
+    }
+    .icon-li{
+        padding: 0 1vw;
+    }
+    li{
+        font-weight: 700;
+        color: #3A3D42;
+    }
+    .box-space{
+        padding: 3vh 0;
+    }
+    .box-out{
+        padding-inline-start: 0;
+    }
 
-.balance{
-    display: flex;
-    height: 30%;
-    background-color: #6379F4!important;
-    margin: 5px 10px;
-    justify-content: space-between;
-}
+    /* right content style */
+    .right-section{
+        width: 80%;
+        flex-direction: column;
+    }
 
-.chart-history{
-    display: flex;
-    margin: 5px 10px;
-    height: 70%;
-}
-.right-balance{
-    display: flex;
-    flex-direction: column;
-    margin-right: 40px;
-}
-.btn{
-    width: 162px;
-    height: 57px;
-    margin: 5px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    border: solid 1px #FFFFFF;
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    cursor: pointer;
-}
-.chart{
-    display: flex;
-    margin: 5px;
-    width: 50%;
-}
-.history{
-    display: flex;
-    width: 50%;
-    margin: 5px;
-    flex-direction: column;
-}
-/* .trans-history{
-    display: flex;
-      justify-content: space-around;
-} */
+    /* top main style */
+    .top-main{
+        justify-content: space-between;
+        align-items: center;
+        padding: 1% 5%;
+        background-color: #6379F4;
+    }
+    .left-balance{
+        flex-direction: column;
+    }
+    .amount-balance{
+        color: white;
+        font-size: 3vw;
+        padding: 2vh 0;
+        font-weight: bold;
+    }
+    .right-balance{
+        flex-direction: column;
+    }
+    button{
+        border-radius: 10px;
+        height: 8vh;
+        width: 10vw;
+        border: 1px solid white;
+        background-color: rgba(255, 255, 255, 0.2);
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+    }
+    .on-button{
+        justify-content: space-around;
+        justify-content: center;
+    }
+    .btn-topup{
+        margin-top: 5%;
+    }
+    /* chart style */
+    .chart{
+        width: 50%;
+        background-image: url(./img/chart.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+    }
 
-.aside{
-    display: flex;
-    margin: 15px;
-    width: 25%;
-    line-height: 55px;
-}
-.list{
-    align-items: center;
-    margin-top: 50px;
-    margin-left: 30px;
-}
-.logout{
-    margin-left: 20px;
-}
+    /* history style */
+    .history{
+        width: 50%;
+        background-color: white;
+        padding: 3%;
+    }
+    .trans-history{
+        justify-content: space-between;
+    }
+    .history-1{
+        justify-content: space-between;
+        padding: 2%;
+        border-radius: 20px;
+    }
+    .detail-trans{
+        flex-direction: column;
+        padding-left: 1vw;
+        justify-content: space-around;
+    }
+    .transfer-total{
+        align-items: center;
+        font-weight: bold;
+    }
+    .green{
+        color: #1EC15F;
+    }
+    .red{
+        color: #FF5B37;
+    }
+    .trans-to{
+        font-weight: bold;
+        color: #4D4B57;
+    }
+    .needs{
+        color: #7A7886;
+    }
+    li:hover{
+        cursor: pointer;
+        color: #6379F4;
+    }
+    .box-li:hover{
+        border-left: 5px solid #6379F4;
+        transition-duration: 100ms;
+    }
+    button:hover{
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    button:active{
+        transform: scale(0.9);
+    }
+    a{
+        text-decoration: none;
+    }
+    .history-1:hover{
+        background-color: rgba(58, 61, 66, 0.1);
+        cursor: pointer;
+    }
+/* footer style */
 .footer{
-    width: 100%;
-    height: 70px;
-    background-color:   #6379F4;
-;
-    display: flex;
+    background-color: #6379F4;
     justify-content: space-between;
+    padding: 1% 5%;
     align-items: center;
+    height: 6vh;
+    color: white;
 }
-.footer-left{
-    display: flex;
-    margin-left: 20px;
-    width: 60%;
-}
-.footer-right{
-    display: flex;
-    margin-right: 20px;
-
-}
-.border-radius{
-    border-radius: 20px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
-    background-color: white;
-}
-.bell{
-    width: 18px;
-    height: 15px;
-    margin-top: 20px;
-}
-.th{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.tittle-his{
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-.mt{
-    margin-top: 7px;
-    margin-bottom: 10px;
-}
-.name-his{
-    width: 55%;
-}
-.numphone{
-    size: 13px;
-    color: rgba(58, 61, 66, 0.9);
-}
-.img-chart{
-    width: 405px;
-    height: 350px;
-    border-radius: 20px;
-}
-.trans-name{
-    font-size: 16px;
-    font-weight: bold;
-    color: #4D4B57;
-}
-.pp{
-    width: 56px;
-}
-.in{
-    color: #1EC15F;
-    font-weight: 700;
-}
-.out{
-    font-weight: 700;
-    color: #FF5B37;
-}
-.tittle-history{
-    font-size: 18px;
-    font-weight: bold;
-    color: #3A3D42;
-}
-.all-history{
-    font-weight: 600;
-}
-.trans{
-    color: #7A7886;
-    font-weight: 14px;
-}
-.left-balance{
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.saldo{
-    font-weight: bold;
-    font-size: 40px;
-    color: #FFFFFF;
-}
-.tittle-balance{
-    font-size: 18px;
-    color: #E0E0E0;
-}
-.numb-left{
-    font-size: 14px;
-    color: #DFDCDC;
-}
-.li{
-    display: flex;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 18px;
-}
-.l{
-    margin-left: 10px;
-    margin-top: -8px;
-}
-
-.llout{
-    margin-top: 60px;
-}
-.icon-btn{
-    margin-top: 12px;
-    display: flex;
+.right-footer{
     width: 30%;
 }
-.text-btn{
-    margin-top: 12px;
-    display: flex;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    width: 60%;
+.phone-footer{
+    padding-right: 12%;
 }
-a{
-    text-decoration: none;
-    color: rgba(58, 61, 66, 0.8);
-}
-a:hover{
-    color: #6379F4;
-}
-
-
 </style>
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <div class="header-left"><h1>Zwallet</h1></div>
-            <div class="header-right">
-                <img class="pprichard" src="./img/pp.svg" alt="">
-                <div class="user">
-                    <div class="name">Richard Chandler</div>
-                    <div class="numphone">+62 8139 3877 7946</div>
+    <header class="d-flex header">
+        <div class="logo">ZWallet</div>
+        <div class="d-flex profile">
+            <img src="./img/pp.svg" alt="">
+            <div class="d-flex user-detail">
+                <div class="name-user">Robert Chandler</div>
+                <div class="phone-user">+62 8139 3877 7946</div>
+            </div>
+            <div class="icon-bell"><img src="./img/icon/bell.svg" alt=""></div>
+        </div>
+    </header>
+    <main class="d-flex main-container">
+       <section class="border left-section">
+        <aside class="d-flex">
+            <nav class="list-menu">
+                <ul class="style-li top-li">
+                    <div class="box-space">
+                        <div class="d-flex box-li-active">
+                            <img class="icon-li" src="./img/icon/grid.svg" alt="">
+                            <li style="color: #6379F4;">Dashboard</li>
+                        </div>
+                    </div>
+                    <div class="box-space">
+                        <div class="d-flex box-li">
+                            <img class="icon-li" src="./img/icon/arrow-up.svg" alt="">
+                            <li>Transfer</li>
+                        </div>
+                    </div>
+                    <div class="box-space">
+                        <div class="d-flex box-li">
+                            <img class="icon-li" src="./img/icon/plus-icon-button.svg" alt="">
+                            <li>Top Up</li>
+                        </div>
+                    </div>
+                    <div class="box-space">
+                        <div class="d-flex box-li">
+                            <img class="icon-li" src="./img/icon/user.svg" alt="">
+                            <li>Profile</li>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+            <nav class="list-out">
+                <ul class="d-flex box-out">
+                    <div class="box-space">
+                        <div class="d-flex box-li style-li">
+                            <img class="icon-li" src="./img/icon/log-out.svg" alt="">
+                            <li>Log Out</li>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </aside>
+       </section>
+       <section class="d-flex right-section">
+            <div class="d-flex border top-main">
+                <div class="left-balance">
+                    <div class="tittle-balance" style="color: #DFDCDC;">Banalnce</div>
+                    <div class="amount-balance">Rp. 120.000</div>
+                    <div class="phone-balance" style="color: #DFDCDC;">+62 813-9387-7946</div>
                 </div>
-                <img class="bell" src="./img/icon/bell.svg" alt="">
+                <div class="d-flex right-balance">
+                    <button class="btn-trf">
+                        <div class="d-flex on-button">
+                            <img src="./img/icon/arrow-up-icon-button.svg" alt="">
+                            <p>Transfer</p>
+                        </div>
+                    </button>
+                    <button class="btn-topup">
+                        <div class="d-flex on-button">
+                            <img src="./img/icon/plus-icon-button.svg" alt="">
+                            <p>Top Up</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="d-flex bot-main">
+                <div class="border chart"></div>
+                <div class="border history">
+                    <div class="d-flex trans-history">
+                        <div class="tittle-history" style="color: #3A3D42; font-weight: bold;">Transaction History</div>
+                       <a href=""><div class="all-history" style="color: #6379F4;">See all</div></a> 
+                    </div>
+                    <div class="d-flex history-1">
+                        <div class="d-flex pp">
+                            <img src="./img/ppsamuel.jpg" alt="">
+                            <div class="d-flex detail-trans">
+                                <div class="trans-to">Samuel Suhi</div>
+                                <div class="needs">Transfer</div>
+                            </div>
+                        </div>
+                        <div class="d-flex green transfer-total">+Rp. 50.000</div>
+                    </div>
+                    <div class="d-flex history-1">
+                        <div class="d-flex pp">
+                            <img src="./img/netflix.png" alt="">
+                            <div class="d-flex detail-trans">
+                                <div class="trans-to">Netflix</div>
+                                <div class="needs">Subscription</div>
+                            </div>
+                        </div>
+                        <div class="d-flex red transfer-total">+Rp. 50.000</div>
+                    </div>
+                    <div class="d-flex history-1">
+                        <div class="d-flex pp">
+                            <img src="./img/ppchristie.png" alt="">
+                            <div class="d-flex detail-trans">
+                                <div class="trans-to">Christine Mar...</div>
+                                <div class="needs">Transfer</div>
+                            </div>
+                        </div>
+                        <div class="d-flex green transfer-total">+Rp. 50.000</div>
+                    </div>
+                    <div class="d-flex history-1">
+                        <div class="d-flex pp">
+                            <img src="./img/adobe.png" alt="">
+                            <div class="d-flex detail-trans">
+                                <div class="trans-to">Adobe Inc.</div>
+                                <div class="needs">Subscription</div>
+                            </div>
+                        </div>
+                        <div class="d-flex red transfer-total">+Rp. 50.000</div>
+                    </div>
+                </div>
             </div>
 
+       </section>
+    </main>
+    <footer class="d-flex footer">
+        <div class="left-footer">2020 Zwallet. All right reserved.</div>
+        <div class="d-flex right-footer">
+            <div class="phone-footer">+62 5637 8882 9901</div>
+            <div class="contact-footer">contact@zwallet.com</div>
         </div>
-        <div class="content">
-            <div class="border-radius aside">
-                <div class="list">
-                    <div class="li list-dashboard">
-                        <div class="icon-db"><img src="./img/icon/grid.svg" alt=""></div>
-                        <div class="l db"><a href="" style="color: #6379F4;">Dashboard </a></div>
-                    </div>
-                    <div class="li list-transfer">
-                        <div class="icon-ltf"><img src="./img/icon/arrow-up.svg" alt=""></div>
-                        <div class="l tf"><a href="./transfer.html">Transfer</a></div>
-                    </div>
-                    <div class="li list-topup">
-                        <div class="icon-ltu"><img src="./img/icon/plus.png" alt="" width=28px></div>
-                        <div class="l tu"><a href="">Top Up</a></div>
-                    </div>
-                    <div class="li list-profile">
-                        <div class="icon-lpro"><img src="./img/icon/user.svg" alt=""></div>
-                        <div class="l pro"><a href="">Profile</a></div>
-                    </div>
-                    <div class="li llout">
-                        <div class="icon-llout"><img src="./img/icon/log-out.svg" alt=""></div>
-                        <div class="l lout"><a href="">Log Out</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-content">
-                <div class="border-radius balance">
-                    <div class="left-balance">
-                        <div class="tittle-balance">Balance</div>
-                        <div class="saldo">Rp. 120.000</div>
-                        <div class="numb-left">+62 813-9387-7946</div>
-                    </div>
-                    <div class="right-balance">
-                            <button class="btn btn-tf">
-                                <div class="icon-btn"><img src="./img/icon/arrow-up.svg" alt=""></div>
-                                <div class="text-btn">Transfer</div>
-                            </button>
-                            <button class="btn btn-tf">
-                                <div class="icon-btn"><img src="./img/icon/plus.png" alt="" width="28px"></div>
-                                <div class="text-btn">Top Up</div>
-                            </button>
-                    </div>
-                </div>
-                <div class="chart-history">
-                    <div class="border-radius chart"><img class="img-chart" src="./img/chart.png" alt=""></div>
-                    <div class="border-radius history">
-                        <div class="th tittle-his">
-                            <div class="tittle-history">Transaction History</div>
-                            <div class="all-history"> <a href="">See All</a>
-                            </div>
-                        </div>
-                        <div class="th mt history1">
-                            <div class="pp"><img src="./img/ppsamuel.jpg" alt=""></div>
-                            <div class="name-his">
-                                <div class="trans-sub">
-                                    <div class="trans-name">Samuel Suhi</div>
-                                    <div class="trans">Transfer</div>
-                                </div>
-                            </div>
-                            <div class="in">+Rp. 150.000</div>
-                        </div>
-                        <div class="th mt history2">
-                            <div class="pp"><img src="./img/netflix.png" alt=""></div>
-                            <div class="name-his">
-                                <div class="trans-name">Netflix</div>
-                                <div class="trans">Subscribtion</div>
-                            </div>
-                            <div class="out">-Rp. 149.000</div>
-                        </div>
-                        <div class="th mt history3">
-                            <div class="pp"><img src="./img/pp.svg" alt=""></div>
-                            <div class="name-his">
-                                <div class="trans-name">Christine Mar...</div>
-                                <div class="trans">Transfer</div>
-                            </div>
-                            <div class="in">+Rp. 150.000</div>
-                        </div>
-                        <div class="th mt history4">
-                            <div class="pp"><img src="./img/adobe.png" alt=""></div>
-                            <div class="name-his">
-                                <div class="trans-name">Adobe Inc.</div>
-                                <div class="trans">Subcribtion</div>
-                            </div>
-                            <div class="out">-Rp. 249.000</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-left">2020 Zwallet. All right reserved.</div>
-            <div class="footer-right">+62 5637 8882 9901 contact@zwallet.com</div>
-        </div>
-    </div>
+    </footer>
 </body>
 </html>
