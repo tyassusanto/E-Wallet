@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Status Transfer : Failed | ZWallet</title>
+    <title>Status Transfer : Success | ZWallet</title>
 </head>
 <style>
     body{
@@ -91,10 +91,6 @@
         padding-left: 1vw;
         justify-content: space-around;
     }
-    .tittle-desc{
-        width: 71%;
-        text-align: center;
-    }
     .history-1{
         justify-content: space-between;
         padding: 2%;
@@ -147,12 +143,23 @@ button:active{
 .btn-continue{
     align-self: flex-end;
     margin: 3vh 0;
+    width: 50%;
     justify-content: space-between;
 }
 .status-transfer{
     flex-direction: column;
     align-items: center;
     padding: 5%;
+}
+.btn-dl{
+    align-items: center;
+    background: rgba(99, 121, 244, 0.15);
+    padding: 0 3%;
+}
+.btn-share{
+    align-items: center;
+    background: rgba(99, 121, 244, 0.15);
+    padding: 0 3%;
 }
 /* footer style */
 .footer{
@@ -227,9 +234,8 @@ button:active{
        </section>
        <section class="d-flex border right-section">
             <div class="d-flex status-transfer">
-                <img class="" src="./img/failed-icon.svg" alt="">
-                <div class="tittle-status"><h2>Transfer Failed</h2></div>
-                <div class="tittle-desc"><p>We can’t transfer your money at the moment, we recommend you to check your internet connection and try again.</p></div>
+                <img class="" src="./img/success-icon.svg" alt="">
+                <div class="tittle-status"><h2>Transfer Success</h2></div>
             </div>
         <div class="d-flex border-10 history-1">
             <div class="d-flex detail-trans">
@@ -268,7 +274,9 @@ button:active{
          </div>
      </div>
         <div class="d-flex btn-continue">
-            <button class="btn-return-home">Try Again</button>
+            <button class="btn-share"><img src="./img/icon/share-icon.svg" alt=""></button>
+            <button class="btn-dl d-flex"><img src="./img/icon/download-icon.svg" alt=""> Download PDF</button>
+            <button class="btn-return-home">Back to Home</button>
         </div>
        </section>
     </main>
