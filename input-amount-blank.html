@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Input Amount | ZWallet</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: #FAFCFF;
+        font-family: Nunito Sans;
+    }
+    .d-flex{
+        display: flex;
+    }
+    .border{
+        border-radius: 25px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        margin: 5px;
+    }
+    /* header style */
+    .header{
+        padding: 1% 5%;
+        justify-content: space-between;
+        background-color: white;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        align-items: center;
+    }
+    .logo{
+        color: #6379F4;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    .user-detail{
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        margin: 0 10px;
+    }
+    /* container style */
+    .main-container{
+        justify-content: center;
+        background-color: #FAFCFF;
+        padding: 1% 5%;
+    }
+    /* list style */
+    aside{
+        flex-direction: column;
+    }
+    .left-section{
+        width: 20%;
+        background-color: white
+    }
+    .style-li{
+        list-style: none;
+        padding: 0%;
+    }
+    .box-li-active {
+        align-items: center;
+        border-left: 5px solid #6379F4;
+    }
+    .icon-li{
+        padding: 0 1vw;
+    }
+    li{
+        font-weight: 700;
+        color: #3A3D42;
+    }
+    .box-space{
+        padding: 3vh 0;
+    }
+    .box-out{
+        padding-inline-start: 0;
+    }
+    li:hover{
+        cursor: pointer;
+        color: #6379F4;
+    }
+    .box-li:hover{
+        border-left: 5px solid #6379F4;
+        transition-duration: 100ms;
+    }
+    /* right content style */
+    .right-section{
+        width: 80%;
+        flex-direction: column;
+        background-color: white;
+        padding: 2%;
+    }
+    .detail-trans{
+        flex-direction: column;
+        padding-left: 1vw;
+        justify-content: space-around;
+    }
+    .history-1{
+        justify-content: space-between;
+        padding: 2%;
+        border-radius: 20px;
+    }
+
+    .trans-to{
+        color: #7A7886;
+    }
+    .needs{
+        font-weight: 700;
+        color: #4D4B57;
+        font-size: 3vh;
+    }
+    .p-left{
+        padding-left: 2%;
+    }
+
+    .border-10{
+        border-radius: 10px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        margin: 5px;
+    }
+button{
+    background-color: #6379F4;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 3vh;
+    height: 8vh;
+    width: 12vw;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+button:active{
+    transform: scale(0.9);
+}
+.btn-continue{
+    align-self: flex-end;
+    margin: 3vh 0;
+}
+.gap-trans{
+    width: 40%;
+}
+.input-amount{
+    flex-direction: column;
+    align-items: center;
+}
+.input-amount-input{
+    padding: 5% 0;
+}
+.input-amount-here{
+    line-height: 56px;
+    font-size: 42px;
+    text-align: center;
+    color: #B5BDCC;
+    border: none;
+    width: 100%;
+}
+.input-amount-here:focus{
+    color: #6379F4;
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+.input-notes{
+    border: none;
+    border-bottom: 1.5px solid rgba(169, 169, 169, 0.6);
+    padding-bottom: 5px;
+    padding-left: 10%;
+    width: 20vw;
+    font-size: 16px;
+    color: rgba(169, 169, 169, 0.8);
+    outline: none;
+    background-image: url(./img/icon/pen-icon.svg);
+    background-repeat: no-repeat;
+}
+
+/* footer style */
+.footer{
+    background-color: #6379F4;
+    justify-content: space-between;
+    padding: 1% 5%;
+    align-items: center;
+    height: 6vh;
+    color: white;
+}
+.right-footer{
+    width: 30%;
+}
+.phone-footer{
+    padding-right: 12%;
+}
+</style>
+<body>
+    <header class="d-flex header">
+        <div class="logo">ZWallet</div>
+        <div class="d-flex profile">
+            <img src="./img/pp.svg" alt="">
+            <div class="d-flex user-detail">
+                <div class="name-user">Robert Chandler</div>
+                <div class="phone-user">+62 8139 3877 7946</div>
+            </div>
+            <div class="icon-bell"><img src="./img/icon/bell.svg" alt=""></div>
+        </div>
+    </header>
+    <main class="d-flex main-container">
+       <section class="border left-section">
+        <aside class="d-flex">
+            <nav class="list-menu">
+                <ul class="style-li top-li">
+                    <div class="box-space">
+                        <div class="d-flex box-li">
+                            <img class="icon-li" src="./img/icon/grid-grey.svg" alt="">
+                            <li>Dashboard</li>
+                        </div>
+                    </div>
+                    <div class="box-space">
+                        <div class="d-flex box-li-active">
+                            <img class="icon-li" src="./img/icon/arrow-up-blue.svg" alt="">
+                            <li style="color: #6379F4;">Transfer</li>
+                        </div>
+                    </div>
+                    <div class="box-space">
+                        <div class="d-flex box-li">
+                            <img class="icon-li" src="./img/icon/plus-icon-button.svg" alt="">
+                            <li>Top Up</li>
+                        </div>
+                    </div>
+                    <div class="box-space">
+                        <div class="d-flex box-li">
+                            <img class="icon-li" src="./img/icon/user.svg" alt="">
+                            <li>Profile</li>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+            <nav class="list-out">
+                <ul class="d-flex box-out">
+                    <div class="box-space">
+                        <div class="d-flex box-li style-li">
+                            <img class="icon-li" src="./img/icon/log-out.svg" alt="">
+                            <li>Log Out</li>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </aside>
+       </section>
+       <section class="d-flex border right-section">
+           <div class="p-left tittle-trans">
+               <h3>Transfer Money</h3>
+           </div>
+           <div class="d-flex border-10 history-1">
+            <div class="d-flex pp">
+                <img src="./img/ppsamuel.jpg" alt="">
+                <div class="d-flex detail-trans">
+                    <div class="trans-to">Samuel Suhi</div>
+                    <div class="needs">+62 813-8492-9994</div>
+                </div>
+            </div>
+        </div>
+        <div class="gap-trans p-left">
+          <p>Type the amount you want to transfer and then
+            press continue to the next steps.</p>
+        </div>
+           <div class="d-flex input-amount">
+               <div class="input-amount-input">
+                    <input class="input-amount-here" placeholder="0.00" type="number" name="" id="">
+               </div>
+               <div class="amount-avail">
+                    <h3>Rp120.000 Available</h3>
+               </div>
+               <div class="notes-amount">
+                    <input class="input-notes" placeholder="Add some notes" type="text" name="" id="">
+               </div>
+           </div> 
+        <div class="d-flex btn-continue">
+            <button>Continue</button>
+        </div>
+       </section>
+    </main>
+    <footer class="d-flex footer">
+        <div class="left-footer">2020 Zwallet. All right reserved.</div>
+        <div class="d-flex right-footer">
+            <div class="phone-footer">+62 5637 8882 9901</div>
+            <div class="contact-footer">contact@zwallet.com</div>
+        </div>
+    </footer>
+</body>
+</html>
