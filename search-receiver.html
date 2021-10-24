@@ -145,6 +145,12 @@
         top: 190px;
         left: 365px;
     }
+    a{
+        text-decoration: none;
+    }
+    .contact-receiver{
+        flex-direction: column;
+    }
 /* footer style */
 .footer{
     background-color: #6379F4;
@@ -159,6 +165,44 @@
 }
 .phone-footer{
     padding-right: 12%;
+}
+@media screen and (max-width : 600px) {
+    .header, .left-section, .footer, .hide-responsive{
+        display: none;
+    }
+    .right-section{
+        width: 100%;
+        margin: 0%;
+        border-radius: 0%;
+        box-shadow: none;
+    }
+    .main-container{
+        padding: 0%;
+        margin: 0%;
+    }
+    .src-icon{
+        top: 93px;
+        left: 25px;
+    }
+    .input-here{
+        padding-left: 10%;
+        width: 88%;
+    }
+    .pp-qa{
+        flex-direction: column;
+    }
+    .detail-trans{
+        align-items: center;
+    }
+    .history-2{
+        padding: 5%;
+        border-radius: 7px;
+    }
+}
+@media screen and (min-width : 600px){
+    .show-responsive{
+        display: none;
+    }
 }
 </style>
 <body>
@@ -178,12 +222,14 @@
         <aside class="d-flex">
             <nav class="list-menu">
                 <ul class="style-li top-li">
-                    <div class="box-space">
-                        <div class="d-flex box-li">
-                            <img class="icon-li" src="./img/icon/grid-grey.svg" alt="">
-                            <li>Dashboard</li>
+                    <a href="./home.html">
+                        <div class="box-space">
+                            <div class="d-flex box-li">
+                                <img class="icon-li" src="./img/icon/grid-grey.svg" alt="">
+                                <li>Dashboard</li>
+                            </div>
                         </div>
-                    </div>
+                     </a>
                     <div class="box-space">
                         <div class="d-flex box-li-active">
                             <img class="icon-li" src="./img/icon/arrow-up-blue.svg" alt="">
@@ -218,48 +264,91 @@
        </section>
        <section class="d-flex border right-section">
            <div class="p-left tittle-trans">
-               <h3>Search Receiver</h3>
+                <div class="b-rec show-responsive">
+                    <div class="d-flex back-history"><img src="./img/icon/arrow-left (2).svg" alt=""> <h2>Find Receiver</h2></div>
+                </div>
+               <h3 class="hide-responsive">Search Receiver</h3>
                <div class="input-search">
                    <img class="src-icon" src="./img/icon/search-icon.svg" alt="">
                    <input class="input-here" placeholder="Search receiver here" type="text" name="" id="">
                </div>
            </div>
-           <div class="d-flex history-1">
-            <div class="d-flex pp">
-                <img style="width: 70px;" src="./img/ppsamuel.jpg" alt="">
-                <div class="d-flex detail-trans">
-                    <div class="trans-to">Samuel Suhi</div>
-                    <div class="needs">+62 813-8492-9994</div>
+           <div class="show-responsive">
+            <div class="d-flex q-access">
+                <h3>Quick Access</h3>
+            </div>
+            <div class="show-responsive d-flex quick-access">
+                <div class="d-flex border history-2">
+                    <div class="d-flex pp-qa">
+                        <img style="width: 70px;" src="./img/ppmichi.png" alt="">
+                        <div class="d-flex detail-trans">
+                            <div class="trans-to">Michi</div>
+                            <div class="needs">-9994</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex border history-2">
+                    <div class="d-flex pp-qa">
+                        <img style="width: 70px;" src="./img/ppdoddy.png" alt="">
+                        <div class="d-flex detail-trans">
+                            <div class="trans-to">Dody</div>
+                            <div class="needs">-3561</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex border history-2">
+                    <div class="d-flex pp-qa">
+                        <img style="width: 70px;" src="./img/pprian.png" alt="">
+                        <div class="d-flex detail-trans">
+                            <div class="trans-to">Rian</div>
+                            <div class="needs">-3822</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="d-flex history-1">
-            <div class="d-flex pp">
-                <img src="./img/ppmomo.jpg" alt="">
-                <div class="d-flex detail-trans">
-                    <div class="trans-to">Momo Taro</div>
-                    <div class="needs">+62 812-4343-6731</div>
+            </div>
+           <div class="show-responsive">
+            <div class="d-flex contact-receiver"><h3>All Contacts</h3>
+            <p>17 Contact Founds</p></div>
+            </div>
+           <a href="./input-amount-blank.html">
+                <div class="d-flex history-1">
+                    <div class="d-flex pp">
+                        <img style="width: 70px;" src="./img/ppsamuel.jpg" alt="">
+                        <div class="d-flex detail-trans">
+                            <div class="trans-to">Samuel Suhi</div>
+                            <div class="needs">+62 813-8492-9994</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="d-flex history-1">
+                <div class="d-flex pp">
+                    <img src="./img/ppmomo.jpg" alt="">
+                    <div class="d-flex detail-trans">
+                        <div class="trans-to">Momo Taro</div>
+                        <div class="needs">+62 812-4343-6731</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="d-flex history-1">
-            <div class="d-flex pp">
-                <img src="./img/ppjessica.jpg" alt="">
-                <div class="d-flex detail-trans">
-                    <div class="trans-to">Jessica Keen</div>
-                    <div class="needs">+62 811-3452-5252</div>
+            <div class="d-flex history-1">
+                <div class="d-flex pp">
+                    <img src="./img/ppjessica.jpg" alt="">
+                    <div class="d-flex detail-trans">
+                        <div class="trans-to">Jessica Keen</div>
+                        <div class="needs">+62 811-3452-5252</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="d-flex history-1">
-            <div class="d-flex pp">
-                <img src="./img/ppmichael.jpg" alt="">
-                <div class="d-flex detail-trans">
-                    <div class="trans-to">Michael Le</div>
-                    <div class="needs">+62 810-4224-4613</div>
+            <div class="d-flex history-1">
+                <div class="d-flex pp">
+                    <img src="./img/ppmichael.jpg" alt="">
+                    <div class="d-flex detail-trans">
+                        <div class="trans-to">Michael Le</div>
+                        <div class="needs">+62 810-4224-4613</div>
+                    </div>
                 </div>
             </div>
-        </div>
        </section>
     </main>
     <footer class="d-flex footer">
