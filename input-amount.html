@@ -165,6 +165,9 @@ button:active{
     color: #6379F4;
     font-size: 5vh;
 }
+a{
+    text-decoration: none;
+}
 
 /* footer style */
 .footer{
@@ -180,6 +183,46 @@ button:active{
 }
 .phone-footer{
     padding-right: 12%;
+}
+@media screen and (max-width:600px) {
+    .header, .left-section, .footer, .gap-trans, .tittle-trans{
+        display: none;
+    }
+    .right-section{
+        margin: 0;
+        width: 100%;
+        border-radius: 0%;
+        box-shadow: none;
+        background-color: #FAFCFF;
+    }
+    .main-container{
+        padding: 0%;
+    }
+    .input-amount-here{
+        margin: 10% 0;
+        background-color: #FAFCFF;
+    }
+    .input-notes{
+        width: 100%;
+        padding-left: 14%;
+        margin: 10% 0;
+        background-color: #FAFCFF;
+    }
+    .btn-continue{
+        width: 100%;
+        place-content: center;
+    }
+    button{
+        width: 40vw;
+    }
+    .history-1{
+        background-color: white;
+    }
+}
+@media screen and (min-width:600px){
+    .show-responsive{
+        display: none;
+    }
 }
 </style>
 <body>
@@ -200,16 +243,20 @@ button:active{
             <nav class="list-menu">
                 <ul class="style-li top-li">
                     <div class="box-space">
-                        <div class="d-flex box-li">
-                            <img class="icon-li" src="./img/icon/grid-grey.svg" alt="">
-                            <li>Dashboard</li>
-                        </div>
+                        <a href="./home.html">
+                            <div class="d-flex box-li">
+                                <img class="icon-li" src="./img/icon/grid-grey.svg" alt="">
+                                <li>Dashboard</li>
+                            </div>
+                        </a>
                     </div>
                     <div class="box-space">
-                        <div class="d-flex box-li-active">
-                            <img class="icon-li" src="./img/icon/arrow-up-blue.svg" alt="">
-                            <li style="color: #6379F4;">Transfer</li>
-                        </div>
+                        <a href="./search-receiver.html">
+                            <div class="d-flex box-li-active">
+                                <img class="icon-li" src="./img/icon/arrow-up-blue.svg" alt="">
+                                <li style="color: #6379F4;">Transfer</li>
+                            </div>
+                        </a>
                     </div>
                     <div class="box-space">
                         <div class="d-flex box-li">
@@ -238,6 +285,7 @@ button:active{
         </aside>
        </section>
        <section class="d-flex border right-section">
+           <div class="d-flex back-history"><img src="./img/icon/arrow-left (2).svg" alt=""> <h2>Transfer</h2></div>
            <div class="p-left tittle-trans">
                <h3>Transfer Money</h3>
            </div>
@@ -266,7 +314,9 @@ button:active{
                </div>
            </div> 
         <div class="d-flex btn-continue">
-            <button>Continue</button>
+            <a href="./confirmation.html">
+                <button>Continue</button>
+            </a>
         </div>
        </section>
     </main>

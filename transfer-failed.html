@@ -169,6 +169,31 @@ button:active{
 .phone-footer{
     padding-right: 12%;
 }
+@media screen and (max-width:600px) {
+    .header, .footer, .left-section, .btn-share, .btn-dl{
+        display: none;
+    }
+    .history-1{
+        background-color: white;
+    }
+    .right-section{
+        margin: 0;
+        width: 100%;
+        border-radius: 0%;
+        box-shadow: none;
+        background-color: #FAFCFF;
+    }
+    .main-container{
+        padding: 0%;
+    }
+    button.btn-return-home{
+        width: 50%;
+    }
+    .btn-continue{
+        width: 100%;
+        place-content: center;
+    }
+}
 </style>
 <body>
     <header class="d-flex header">

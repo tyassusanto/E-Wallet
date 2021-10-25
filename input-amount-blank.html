@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Input Amount | ZWallet</title>
+    <title>Input Amount Blank | ZWallet</title>
 </head>
 <style>
     body{
@@ -180,7 +180,9 @@ input::-webkit-inner-spin-button{
     background-image: url(./img/icon/pen-icon.svg);
     background-repeat: no-repeat;
 }
-
+a{
+    text-decoration: none;
+}
 /* footer style */
 .footer{
     background-color: #6379F4;
@@ -195,6 +197,48 @@ input::-webkit-inner-spin-button{
 }
 .phone-footer{
     padding-right: 12%;
+}
+@media screen and (max-width:600px) {
+    .header, .left-section, .footer, .gap-trans, .tittle-trans{
+        display: none;
+    }
+    .right-section{
+        margin: 0;
+        width: 100%;
+        border-radius: 0%;
+    }
+    .main-container{
+        padding: 0%;
+    }
+    .right-section{
+        box-shadow: none;
+        background-color: #FAFCFF;
+    }
+    .input-amount-here{
+        margin: 10% 0;
+        background-color: #FAFCFF;
+    }
+    .input-notes{
+        width: 100%;
+        padding-left: 14%;
+        margin: 10% 0;
+        background-color: #FAFCFF;
+    }
+    .btn-continue{
+        width: 100%;
+        place-content: center;
+    }
+    button{
+        width: 40vw;
+    }
+    .history-1{
+        background-color: white;
+    }
+}
+@media screen and (min-width:600px){
+    .show-responsive{
+        display: none;
+    }
 }
 </style>
 <body>
@@ -215,16 +259,20 @@ input::-webkit-inner-spin-button{
             <nav class="list-menu">
                 <ul class="style-li top-li">
                     <div class="box-space">
+                        <a href="./home.html">
                         <div class="d-flex box-li">
                             <img class="icon-li" src="./img/icon/grid-grey.svg" alt="">
                             <li>Dashboard</li>
                         </div>
+                        </a>
                     </div>
                     <div class="box-space">
+                        <a href="./search-receiver.html">
                         <div class="d-flex box-li-active">
                             <img class="icon-li" src="./img/icon/arrow-up-blue.svg" alt="">
                             <li style="color: #6379F4;">Transfer</li>
                         </div>
+                        </a>
                     </div>
                     <div class="box-space">
                         <div class="d-flex box-li">
@@ -253,15 +301,18 @@ input::-webkit-inner-spin-button{
         </aside>
        </section>
        <section class="d-flex border right-section">
+           <div class="b-history show-responsive">
+            <div class="d-flex back-history"><img src="./img/icon/arrow-left (2).svg" alt=""> <h2>Transfer</h2></div>
            <div class="p-left tittle-trans">
                <h3>Transfer Money</h3>
+            </div>
            </div>
            <div class="d-flex border-10 history-1">
             <div class="d-flex pp">
                 <img src="./img/ppsamuel.jpg" alt="">
                 <div class="d-flex detail-trans">
-                    <div class="trans-to">Samuel Suhi</div>
-                    <div class="needs">+62 813-8492-9994</div>
+                    <div class="needs">Samuel Suhi</div>
+                    <div class="trans-to">+62 813-8492-9994</div>
                 </div>
             </div>
         </div>
@@ -281,7 +332,9 @@ input::-webkit-inner-spin-button{
                </div>
            </div> 
         <div class="d-flex btn-continue">
-            <button>Continue</button>
+            <a href="input-amount.html">
+                <button>Continue</button>
+            </a>
         </div>
        </section>
     </main>

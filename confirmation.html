@@ -157,6 +157,39 @@ button:active{
 .phone-footer{
     padding-right: 12%;
 }
+@media screen and (max-width:600px) {
+    .header, .footer, .left-section, .tittle-trans{
+        display: none;
+    }
+    .btn-continue{
+        width: 100%;
+        place-content: center;
+    }
+    button{
+        width: 40vw;
+    }
+    .history-1{
+        background-color: white;
+    }
+    .right-section{
+        margin: 0;
+        width: 100%;
+        border-radius: 0%;
+        box-shadow: none;
+        background-color: #FAFCFF;
+    }
+    .main-container{
+        padding: 0%;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+@media screen and (min-width:600px){
+    .show-responsive{
+        display: none;
+    }
+}
 </style>
 <body>
     <header class="d-flex header">
@@ -214,6 +247,7 @@ button:active{
         </aside>
        </section>
        <section class="d-flex border right-section">
+        <div class="d-flex back-history"><img src="./img/icon/arrow-left (2).svg" alt=""> <h2>Confirmation</h2></div>
            <div class="p-left tittle-trans">
                <h3>Transfer To</h3>
            </div>
@@ -253,9 +287,10 @@ button:active{
                 <div class="needs">For buying some socks</div>
             </div>
         </div>
+        <a href="./transfer-success.html">
         <div class="d-flex btn-continue">
             <button>Continue</button>
-        </div>
+        </div></a>
        </section>
     </main>
     <footer class="d-flex footer">
